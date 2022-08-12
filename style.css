@@ -1,0 +1,80 @@
+:root {
+   --dark: rgb(0 0 0 / 0.5);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   width: 100vw;
+   min-height: 100vh;
+   overflow-y: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #555;
+}
+
+label {
+   width: min(400px, 80vw);
+   height: 150px;
+   background: #777;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 40vmax;
+   box-shadow: 0 0 0px 10px rgba(8, 8, 8, 0.2);
+}
+
+label input {
+   appearance: none;
+}
+
+label input:checked ~ span {
+   /* right: 0; */
+   transform: translateX(82%);
+
+
+} 
+
+label span {
+   border-radius: 40vmax;
+   position: absolute;
+   top: 0;
+   height: 100%;
+   width: 55%;
+   left: 0;
+   transform: translateX(0);
+   transform-origin: -40vmax;
+   display: flex;
+   align-items: center;
+   padding: 1rem;
+   background: #444;
+   transition: 0.3s;
+
+}
+
+
+
+label span div.lighter {
+   width: 20px;
+   height: 20px;
+   background: rgba(119, 115, 115, 0.418);
+   border-radius: 50%;
+   aspect-ratio: 1 / 1;
+   margin-left: auto;
+   transition: 0.5s;
+}
+
+label input:checked ~ span div.lighter {
+   background: rgb(255, 255, 255);
+   box-shadow: 0 0 5px 1px white;
+}
+
+
+
+
